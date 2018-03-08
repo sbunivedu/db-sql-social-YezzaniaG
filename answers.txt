@@ -3,6 +3,10 @@
 2)
 
 3)
+  select h.name, h.grade from highschooler h, friend f
+  where h.id - f.id1 group by f.id1
+  having count (f.id2) = (select max(fr.num) from
+  (select count (id2) as num from friend group by id1) as fr)
 
 4)
 
