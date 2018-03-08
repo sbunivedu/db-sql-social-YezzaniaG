@@ -25,6 +25,6 @@
 9)
   select count (f.if1) from friend f, highschooler h
   where h.id = f.id2 and NOT h.name = 'Cassandra' and f.id2 in
-  (select f2.id1 from friend f2, highschooler h2 where f.id2 = f2.id1 and h2.id = f2.id2 and h2.name = 'Cassandra')
+  (select f2.id1 from friend f2, highschooler h2 where f.id2 = f2.id1 and h2.id = f2.id2 and h2.name = 'Cassandra');
 
 10)
