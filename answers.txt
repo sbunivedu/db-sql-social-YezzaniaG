@@ -20,7 +20,7 @@
 
 8)
   select avg (n)
-  from (select count(f.id1) as n from friend f group by f.id1)
+  from (select count(f.id1) as n from friend f group by f.id1);
 
 9)
   select count (f.if1) from friend f, highschooler h
