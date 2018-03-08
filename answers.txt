@@ -3,6 +3,9 @@
   from Highschooler where ID in (select ID1 from Friend where ID2 in (select ID from Highschooler where name = "Gabriel"));
 
 2)
+  select name, grade from Highschooler
+  where ID not in (select ID1 from Likes union select ID2 from Likes)
+  order by grade, name;
 
 3)
   select h.name, h.grade from highschooler h, friend f
