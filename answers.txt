@@ -36,6 +36,9 @@
       H3.ID - F2.ID1 and F2.ID2 = H2.ID;
 
 7)
+  select st.sNum-nm.nNum
+  from (select count(*) as sNum from Highschooler) as st,
+  (select count(distinct name) as nNum from Highschooler) as nm;
 
 8)
   select avg (n)
