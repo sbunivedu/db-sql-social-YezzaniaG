@@ -50,3 +50,7 @@
   (select f2.id1 from friend f2, highschooler h2 where f.id2 = f2.id1 and h2.id = f2.id2 and h2.name = 'Cassandra');
 
 10)
+  select name, grade
+  from (select, ID2, count(ID2) as numLiked from Likes group by ID2), Highschooler
+  where numLiked > 1 and ID2 = ID;
+
